@@ -298,12 +298,8 @@ See `CLAUDE.md` for agent invocation patterns.
 ## Support
 
 **For Confluent SEs:**
-- Internal Slack: `#se-workflow` (if available)
 - GitHub Issues: Report bugs or request features
 - Contributions: PRs welcome!
-
-**For Customers:**
-- This is an internal SE tool. For Confluent Cloud support, contact your Confluent SE or support@confluent.io.
 
 ## Contributing
 
