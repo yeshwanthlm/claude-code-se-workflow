@@ -1,0 +1,43 @@
+# Customer engagement data (never commit real customer data)
+customers/*
+!customers/_template
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+!*.tfvars.example
+.terraform.lock.hcl
+
+# Demo outputs
+demo/terraform-outputs.json
+demo/data-generator/client.properties
+demo/data-generator/producer.log
+demo/data-generator/producer.pid
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log

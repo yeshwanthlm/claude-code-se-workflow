@@ -1,0 +1,84 @@
+{
+  "type": "record",
+  "name": "UserEvent",
+  "namespace": "com.example.events",
+  "doc": "User activity event (page views, clicks, purchases, etc.)",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "string",
+      "doc": "Unique user identifier"
+    },
+    {
+      "name": "event_id",
+      "type": "string",
+      "doc": "Unique event identifier"
+    },
+    {
+      "name": "event_type",
+      "type": {
+        "type": "enum",
+        "name": "EventType",
+        "symbols": ["page_view", "click", "search", "add_to_cart", "purchase", "video_play", "video_pause", "login", "logout"]
+      },
+      "doc": "Type of user event"
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "logicalType": "timestamp-millis",
+      "doc": "Event timestamp in milliseconds since epoch"
+    },
+    {
+      "name": "session_id",
+      "type": "string",
+      "doc": "User session identifier"
+    },
+    {
+      "name": "page",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Page URL or path"
+    },
+    {
+      "name": "device",
+      "type": {
+        "type": "enum",
+        "name": "DeviceType",
+        "symbols": ["mobile", "desktop", "tablet", "unknown"]
+      },
+      "default": "unknown",
+      "doc": "Device type"
+    },
+    {
+      "name": "country",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Country code (ISO 3166-1 alpha-2)"
+    },
+    {
+      "name": "amount",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Transaction amount (for purchase events)"
+    },
+    {
+      "name": "currency",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Currency code (ISO 4217)"
+    },
+    {
+      "name": "items",
+      "type": ["null", "int"],
+      "default": null,
+      "doc": "Number of items (for purchase events)"
+    },
+    {
+      "name": "search_query",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Search query string (for search events)"
+    }
+  ]
+}

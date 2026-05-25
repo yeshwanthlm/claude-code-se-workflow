@@ -1,0 +1,8 @@
+# Confluent Kafka Python client
+confluent-kafka[avro,schema-registry]==2.3.0
+
+# Optional: for JSON schema support
+# jsonschema==4.17.3
+
+# Optional: for Protobuf schema support
+# protobuf==4.23.0
